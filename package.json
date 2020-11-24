@@ -39,22 +39,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.7",
-    "@babel/preset-env": "^7.12.7",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "webpack.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AleksandraGra/nielubiepolitury.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AleksandraGra/nielubiepolitury/issues"
-  },
-  "homepage": "https://github.com/AleksandraGra/nielubiepolitury#readme"
+    "@babel/preset-env": "^7.12.7"
+  }
 }

@@ -1,6 +1,4 @@
-//import logo from './logo.svg';
 import React from "react";
-import './scss/App.scss';
 import {
     HashRouter,
     Switch,
