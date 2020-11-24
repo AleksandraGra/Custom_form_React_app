@@ -1,3 +1,18 @@
+@import "reset/reset";
+@import ".js/Components/page_navigation/_navigation.scss";
+@import "settings/fonts";
+@import "settings/colors";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-noto-sans;
+}
+
+
+
 .App {
   text-align: center;
 }

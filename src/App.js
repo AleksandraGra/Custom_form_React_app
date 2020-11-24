@@ -4,14 +4,17 @@ import {
     Switch,
     Route,
 } from 'react-router-dom';
-import Navigation from "./js/Components/Navigation";
+import Navigation from "./js/Components/page_navigation/Navigation";
 import Home from "./js/Components/Home";
 import Form from "./js/Components/Form";
 import NotFound from "./js/Components/NotFound";
+//import { library } from '@fortawesome/fontawesome-svg-core'
+
 
 
 export default function App() {
     return (
+        <>
         <HashRouter>
             <div>
                 <Navigation/>
@@ -28,6 +31,7 @@ export default function App() {
                 </Switch>
             </div>
         </HashRouter>
+        </>
     );
 }
 

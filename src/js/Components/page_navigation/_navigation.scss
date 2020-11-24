@@ -1,0 +1,54 @@
+.header__lp {
+  background-color: blue;
+  color: white;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .header_container_index{
+    height: 5.625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .page_logo {
+    padding-left: 2.5rem;
+    padding-right: 0.312rem;
+    color: white;
+    font-weight: 400;
+  }
+
+  .page_nav{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+  }
+
+  .page-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    text-transform: uppercase;
+
+    a{
+      text-transform: uppercase;
+      color: white;
+      font-size: 1.3rem;
+      padding-left: 2.5rem;
+      padding-right:2.5rem;
+      justify-content: flex-end;
+      text-decoration: none;
+    }
+    a:hover {
+      color: orange;
+    }
+
+  }
+
+}
