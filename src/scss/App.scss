@@ -1,5 +1,8 @@
 @import "reset/reset";
-@import ".js/Components/page_navigation/_navigation.scss";
+//@import "src/js/Components/page_navigation/navigation";
+//@import "src/js/Components/page_portfolio/portfolio";
+//@import "src/js/Components/page_about_us/about_us";
+
 @import "settings/fonts";
 @import "settings/colors";
 
@@ -8,10 +11,12 @@
 }
 
 body {
-  font-family: $font-noto-sans;
+  font-family: $font-archiwo;
+  color:#4a4a49;
+  width: 81.25rem;
+  margin: 0 auto;
+  height: auto;
 }
-
-
 
 .App {
   text-align: center;

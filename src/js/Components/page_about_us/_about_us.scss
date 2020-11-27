@@ -1,0 +1,53 @@
+.about_us{
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+
+  h1{
+    font-size: 1.50rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+
+  .about_us_text{
+    padding-bottom: 40px;
+    width: 50%;
+    line-height: 20px;
+  }
+
+  .about_containers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    padding-bottom: 40px;
+    height: auto;
+
+    .about_restoration_container, .about_search_container {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .about_restoration_text, .about_search_text {
+        padding-top: 15px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+}
+
+.about_us_button{
+  background-color: white;
+  border:none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a4a49;
+}
+.about_us_button:hover{
+  color: #A1A194;
+}

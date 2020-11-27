@@ -1,52 +1,52 @@
 .header__lp {
-  background-color: blue;
-  color: white;
-
-  h1 {
-    font-size: 3rem;
-  }
+  color:#4a4a49;
 
   .header_container_index{
-    height: 5.625rem;
+    padding: 20px 10px;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    font-size: 2rem;
+    //align-items: center;
+    //text-align: left;
+    //font-size: 2rem;
   }
 
   .page_logo {
     padding-left: 2.5rem;
     padding-right: 0.312rem;
-    color: white;
-    font-weight: 400;
+  }
+
+  .header_image_img{
+    height: 60px;
+    width: 75px;
   }
 
   .page_nav{
-    flex-grow: 1;
     display: flex;
+    flex-direction: row;
+    //flex-grow: 1;
     justify-content: flex-end;
     font-size: 1rem;
+
   }
 
   .page-nav-list {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-direction: row;
     color: white;
-    text-transform: uppercase;
+    list-style-type: none;
+    text-decoration: none;
 
-    a{
+    li{
       text-transform: uppercase;
-      color: white;
       font-size: 1.3rem;
       padding-left: 2.5rem;
       padding-right:2.5rem;
-      justify-content: flex-end;
       text-decoration: none;
     }
-    a:hover {
-      color: orange;
+    li:hover {
+
     }
 
   }

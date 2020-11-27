@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 import MiniLogo from '../assets/minilogo.png';
 import './_navigation.scss';
 
+
 export default function Navigation() {
     return (
         <header className="header__lp">
-            <h1>
                 <div className="header_container_index">
                     <div className="page_logo">
                         <img src={MiniLogo} alt="navigation minilogo" className="header_image_img"/>
@@ -16,14 +16,20 @@ export default function Navigation() {
                             <li>
                                 <Link to="/">Strona główna</Link>
                             </li>
-                            <li>O nas</li>
-                            <li>Kontakt</li>
+
+                            <li>
+                                <Link to="#about_us_id">O nas</Link>
+                            </li>
+
+                            <li>
+                                <Link to="#contact_id">Kontakt</Link>
+                            </li>
+
                             <li>
                                 <Link to="/form">Spersonalizuj zamówienie</Link>
                             </li>
                         </ul>
                     </nav>
                 </div>
-            </h1>
         </header>);
 }
