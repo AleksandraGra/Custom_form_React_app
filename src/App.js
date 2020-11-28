@@ -4,14 +4,12 @@ import {
     Switch,
     Route,
 } from 'react-router-dom';
-import Navigation from "./js/Components/page_navigation/Navigation";
+//import Navigation from "./js/Components/page_navigation/Navigation";
 import Home from "./js/Components/Home";
-import Form from "./js/Components/Form";
+import Form from "./js/Components/form/Form";
 import NotFound from "./js/Components/NotFound";
-
-import Footer from "./js/Components/page_footer/Footer";
+//import Footer from "./js/Components/page_footer/Footer";
 //import initMap from "./js/Components/page_contact/Contact";
-
 //import { library } from '@fortawesome/fontawesome-svg-core'
 //import "./scss/App.scss"
 
@@ -21,7 +19,6 @@ export default function App() {
         <>
             <HashRouter>
                 <div>
-                    <Navigation/>
                     <Switch>
                         <Route exact path="/">
                             <Home />
@@ -38,8 +35,6 @@ export default function App() {
                     </Switch>
                 </div>
             </HashRouter>
-
-            <Footer/>
         </>
     );
 };

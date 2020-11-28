@@ -31,7 +31,6 @@ function Contact() {
                         <GoogleMap
                             center={center}
                             zoom={15}
-
                         >
                             <div id="map" className="contact_google_map"/>
                         </GoogleMap>
@@ -45,7 +44,5 @@ function Contact() {
         </section>
     )
 }
-
-
 
 export default Contact

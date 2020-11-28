@@ -1,10 +1,15 @@
 .about_us{
+  width: 100%;
   margin-top: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: auto;
+
+  @media (min-width: 360px) and (max-width: 599px) {
+    margin-top: 50px;
+  }
 
   h1{
     font-size: 1.50rem;
@@ -16,6 +21,16 @@
     padding-bottom: 40px;
     width: 50%;
     line-height: 20px;
+
+    @media (min-width: 600px) and (max-width: 1025px){
+      width: 65%;
+      text-align: justify;
+    }
+    @media (min-width: 360px) and (max-width: 599px) {
+      text-align: justify;
+      width: 75%;
+    }
+
   }
 
   .about_containers{
@@ -26,28 +41,55 @@
     padding-bottom: 40px;
     height: auto;
 
+    @media (min-width: 600px) and (max-width: 1025px) {
+      align-items: center;
+    }
+    @media only screen and (max-width: 360px) {
+      width: 75%;
+      align-items: center;
+    }
+
+
     .about_restoration_container, .about_search_container {
       flex-direction: column;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding-right: 10px;
+
+      @media (min-width: 600px) and (max-width: 1025px) {
+        width: 65%;
+        justify-content: space-around;
+      }
 
       .about_restoration_text, .about_search_text {
-        padding-top: 15px;
-        padding-bottom: 30px;
+        height: 32px;
+        margin-top: 15px;
+
+        @media (min-width: 600px) and (max-width: 1025px) {
+          text-align: center;
+        }
+        @media (min-width: 360px) and (max-width: 599px){
+          text-align: center;
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+        }
+
       }
     }
   }
 
+  .about_us_button{
+    background-color: white;
+    border:none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4a4a49;
+  }
+
+  .about_us_button:hover{
+    color: #A1A194;
+  }
 }
 
-.about_us_button{
-  background-color: white;
-  border:none;
-  font-size: 20px;
-  font-weight: bold;
-  color: #4a4a49;
-}
-.about_us_button:hover{
-  color: #A1A194;
-}

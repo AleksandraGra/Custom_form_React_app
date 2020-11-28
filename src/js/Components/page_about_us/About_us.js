@@ -1,8 +1,13 @@
 import React from 'react';
 import './_about_us.scss';
-
+import {Link} from "react-router-dom";
+import ScrollIntoView from 'react-scroll-into-view'
 
 const AboutUs = () => {
+    const buttonClick = () => {
+
+    }
+
     return (
         <section id="about_us_id" className="about_us">
           <h1>Nasze usługi</h1>
@@ -30,7 +35,7 @@ const AboutUs = () => {
               </div>
 
           </div>
-          <button className="about_us_button">Chcesz spersonalizować swoje zlecenie? kliknij</button>
+         <button className="about_us_button" onClick={buttonClick}>Chcesz spersonalizować swoje zlecenie? kliknij</button>
 
         </section>
     );

@@ -1,0 +1,56 @@
+form{
+  max-width: 81.25rem;
+  margin: 0 auto;
+
+  .form_first_section{
+    width: 100%;
+    height: auto;
+    margin:40px 20px 0 40px;
+    display: flex;
+    align-items: baseline;
+
+    @media (max-width: 520px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .form_service_choose{
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-right: 10px;
+
+    @media (max-width: 520px) {
+      padding-bottom: 10px;
+    }
+  }
+
+  .form_restore_sec1{
+    @extend.form_first_section;
+    margin-top: 20px;
+
+    .form_restore_1{
+      @extend.form_service_choose;
+      font-weight: normal;
+    }
+  }
+
+  .form_restore_sec3{
+    @extend.form_first_section;
+    margin-top: 20px;
+
+    .form_restore_3{
+      @extend.form_service_choose;
+      font-weight: normal;
+    }
+  }
+
+
+.form_restore_option, .form_service_option{
+  font-size: 12px;
+}
+
+
+
+
+}
