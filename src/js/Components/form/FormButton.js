@@ -1,17 +1,19 @@
 import React, {useState} from "react";
 import './_form.scss';
+import{ init } from 'emailjs-com';
+init("user_K8CVmHZPgBpaCnTeI3Lwb");
 
 const FormSubmitButton = () => {
-    const [choose, setChoose] = useState("");
+    const [submit, setSubmit] = useState("");
 
     const buttonClick = e => {
-        setChoose(e.target.value)
+        setSubmit(e.target.value)
     }
 
 
     return (
         <div className="form_button_container">
-            <button className="form_submit_button" value={choose} onClick={buttonClick}>Wyślij zgłoszenie</button>
+            <button type="submit" className="form_submit_button" value={submit} onClick={buttonClick}>Wyślij zgłoszenie</button>
         </div>
     );
 };

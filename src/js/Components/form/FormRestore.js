@@ -2,16 +2,16 @@ import React, {useState} from "react";
 import './_form.scss';
 
 const FormRestoration = () => {
-   const [choose, setChoose] = useState("");
-   const [expectation, setExpectation] = useState("")
+    const [choose, setChoose] = useState("");
+    const [expectation, setExpectation] = useState("")
 
-   const handleChange = e => {
-       setChoose(e.target.value)
-   }
+    const handleChange = e => {
+        setChoose(e.target.value)
+    }
 
-   const handleTextarea = e => {
-       setExpectation(e.target.value)
-   }
+    const handleTextarea = e => {
+        setExpectation(e.target.value)
+    }
 
 
    return (
