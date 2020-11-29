@@ -4,11 +4,9 @@ import {
     Switch,
     Route,
 } from 'react-router-dom';
-//import Navigation from "./js/Components/page_navigation/Navigation";
 import Home from "./js/Components/Home";
 import Form from "./js/Components/form/Form";
 import NotFound from "./js/Components/NotFound";
-//import Footer from "./js/Components/page_footer/Footer";
 //import initMap from "./js/Components/page_contact/Contact";
 //import { library } from '@fortawesome/fontawesome-svg-core'
 //import "./scss/App.scss"

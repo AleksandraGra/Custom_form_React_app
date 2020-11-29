@@ -18,7 +18,7 @@ export default function Navigation() {
                         <li><Link className="page_nav_menu" to="/">Strona główna</Link></li>
                         <li><ScrollIntoView className="page_nav_menu" selector="#about_us_id">O nas</ScrollIntoView></li>
                         <li><ScrollIntoView className="page_nav_menu" selector="#contact_id">Kontakt</ScrollIntoView></li>
-                        <li><Link className="page_nav_menu" to="/form">Spersonalizuj zamówienie</Link></li>
+                        <li className="bla" id="cons1"><Link className="page_nav_menu" to="/form">Spersonalizuj zamówienie</Link></li>
                     </ul>
                 </div>
         </header>);

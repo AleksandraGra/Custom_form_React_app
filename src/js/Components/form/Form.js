@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 import './_form.scss';
-import FormRestoration from "./FormRestoration";
+import FormRestoration from "./FormRestore";
+import FormSearch from "./FormSearch";
+import FormPersonalData from "./FormPersonalData";
+import FormSubmitButton from "./FormButton";
 //import {Link} from "react-router-dom";
 
 const Form = () => {
@@ -20,6 +23,9 @@ const Form = () => {
                 </select>
             </section>
             <FormRestoration/>
+            <FormSearch/>
+            <FormPersonalData/>
+            <FormSubmitButton/>
         </form>
         );
 
