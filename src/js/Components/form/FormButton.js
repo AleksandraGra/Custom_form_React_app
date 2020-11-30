@@ -10,10 +10,9 @@ const FormSubmitButton = () => {
         setSubmit(e.target.value)
     }
 
-
     return (
         <div className="form_button_container">
-            <button type="submit" className="form_submit_button" value={submit} onClick={buttonClick}>Wyślij zgłoszenie</button>
+            <button type="submit" className="form_submit_button" value={submit} onSubmit={buttonClick}>Wyślij zgłoszenie</button>
         </div>
     );
 };

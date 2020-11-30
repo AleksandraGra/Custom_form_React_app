@@ -4,27 +4,41 @@ import FormRestoration from "./FormRestore";
 import FormSearch from "./FormSearch";
 import FormPersonalData from "./FormPersonalData";
 import FormSubmitButton from "./FormButton";
+import FormFirstSelect from "./FormFirstSelect";
 //import {Link} from "react-router-dom";
 
 const Form = () => {
-    const [choose, setChoose] = useState("");
+    const [option, setOption] = useState(0)
 
-    const handleChange = e => {
-        setChoose(e.target.value)
+    const [forms, setForms] = useState({
+        name:"",
+        surname:"",
+        company:"",
+        address:"",
+        email:"",
+        phone:""
+    })
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setForms(prevState => {
+            return {
+                ...prevState,
+                [name]: value
+            }
+        });
+    };
+
+    const changeOption = (option) => {
+        setOption(option)
     }
 
     return (
-        <form>
-            <section id="form_first_secId" className="form_first_section" >
-                <p className="form_service_choose">Wybierz rodzaj usługi</p>
-                <select className="form_service_select" value={choose} onChange={handleChange}>
-                    <option className="form_service_option" >renowacja</option>
-                    <option className="form_service_option" >wyszukanie przedmiotu vintage</option>
-                </select>
-            </section>
-            <FormRestoration/>
-            <FormSearch/>
-            <FormPersonalData/>
+        <form >
+            <FormFirstSelect changeOption={changeOption}/>
+            {option === 1 && <FormRestoration />}
+            {option === 2 && <FormSearch/>}
+            <FormPersonalData forms={forms} handleChange={handleChange}/>
             <FormSubmitButton/>
         </form>
         );

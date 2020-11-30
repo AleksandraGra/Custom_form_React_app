@@ -4,7 +4,8 @@ import './_about_us.scss';
 //import ScrollToTop from 'react-scroll-to-top'
 
 const AboutUs = () => {
-    function scrollTo(e){
+
+    function handleClick(){
     }
 
 
@@ -35,7 +36,9 @@ const AboutUs = () => {
               </div>
 
           </div>
-            <button className="about_us_button" id="about_button_id">Chcesz spersonalizować swoje zlecenie? kliknij</button>
+            <a href="http://localhost:3000/#/form" >
+                <button className="about_us_button" id="about_button_id" onClick={handleClick}>Chcesz spersonalizować swoje zlecenie? kliknij</button>
+            </a>
         </section>
     );
 };
