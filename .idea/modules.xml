@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../KRA_SFE_S_22_ScrumLab/.idea/KRA_SFE_S_22_ScrumLab.iml" filepath="$PROJECT_DIR$/../KRA_SFE_S_22_ScrumLab/.idea/KRA_SFE_S_22_ScrumLab.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/website.iml" filepath="$PROJECT_DIR$/.idea/website.iml" />
     </modules>
   </component>
