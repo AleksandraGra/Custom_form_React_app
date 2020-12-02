@@ -1,8 +1,9 @@
-.portfolio{
+.portfolio {
   width:100%;
 
-  .logo_portfolio{
-    .logo_portfolio_img{
+  .logo_portfolio {
+
+    .logo_portfolio_img {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -23,7 +24,7 @@
     }
   }
 
-  .photos_portfolio_img{
+  .photos_portfolio_img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +34,7 @@
       flex-direction: column;
     }
 
-    .photo1_portfolio_img{
+    .photo1_portfolio_img {
       height: 15.625rem;
       width: auto;
 
@@ -41,13 +42,14 @@
         width: 30%;
         height: auto;
       }
+
       @media (min-width: 360px) and (max-width: 599px) {
         width: 80%;
         height: auto;
       }
     }
 
-    .photo2_portfolio_img{
+    .photo2_portfolio_img {
       height: 15.625rem;
       width: auto;
 
@@ -56,13 +58,13 @@
         height: auto;
       }
 
-      @media (min-width: 360px) and (max-width: 599px){
+      @media (min-width: 360px) and (max-width: 599px) {
         width: 80%;
         height: auto;
       }
     }
 
-    .photo3_portfolio_img{
+    .photo3_portfolio_img {
       height: 15.625rem;
       width: auto;
 
@@ -70,10 +72,12 @@
         width: 30%;
         height: auto;
       }
+
       @media (min-width: 360px) and (max-width: 599px) {
         width: 80%;
         height: auto;
       }
+
     }
   }
 }
