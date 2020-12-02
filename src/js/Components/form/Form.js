@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './_form.scss';
 import FormRestoration from "./FormRestore";
 import FormSearch from "./FormSearch";
@@ -8,12 +8,11 @@ import FormFirstSelect from "./FormFirstSelect";
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
 init("user_K8CVmHZPgBpaCnTeI3Lwb");
+//import FormValidate from "./FormValidate";
 
 
-const Form = () => {
-
+const Form = (callback, validate) => {
     const [option, setOption] = useState(0)
-
     const [forms, setForms] = useState({
         name:"",
         surname:"",
@@ -30,7 +29,8 @@ const Form = () => {
         pickups:"",
         send:""
     })
-
+    const [errors, setErrors] = useState({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
 
     const handleChange = (e) => {
@@ -61,15 +61,27 @@ const Form = () => {
     const sendEmail=(e)=>{
         e.preventDefault();
 
-        emailjs
-            .sendForm('service_v1rsoyi', 'template_kso4aev', e.target, 'user_K8CVmHZPgBpaCnTeI3Lwb')
+        emailjs.sendForm('service_v1rsoyi', 'template_kso4aev', e.target, 'user_K8CVmHZPgBpaCnTeI3Lwb')
             .then((result) => {
                 alert("Wysłano formularz, wkrótce skontaktujemy się z Tobą",result.text);
             }, (error) => {
                 alert("Nie udało się wysłąć zgłoszenia. Spróbuj ponownie",error.text);
             });
             e.target.reset()
+
+        setErrors(validate(forms));
+        setIsSubmitting(true);
     }
+
+    useEffect(
+        () => {
+            if (Object.keys(errors).length === 0 && isSubmitting) {
+                callback();
+            }
+        },
+        [errors]
+    );
+
 
     return (
         <form className="contact-form" onSubmit={sendEmail}>
