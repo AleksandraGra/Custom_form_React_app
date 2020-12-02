@@ -6,6 +6,7 @@ import {faCheckSquare} from '@fortawesome/free-solid-svg-icons'
 
 const FormPersonalData = ({ forms: personal, handleChange }) => {
     const [permission, setPermission] = useState ({color:"#5B605F"})
+
     const changeColor = (e) => {
         setPermission(prev => ({
             color: prev.color === '#5B605F' ? '#008000' : '#5B605F'
@@ -15,6 +16,7 @@ const FormPersonalData = ({ forms: personal, handleChange }) => {
     return (
         <div className="form_data_container">
             <p className="form_data_text">Twoje dane kontaktowe:</p>
+
             <section className="form_data_sec1">
                 <div className="form_data_sec1name">
                     <p className="form_data_1">Imię</p>
@@ -46,6 +48,7 @@ const FormPersonalData = ({ forms: personal, handleChange }) => {
                     <input type="number" name="phone" className="form_data_input_2" value={personal.phone} onChange={handleChange}/>
                 </div>
             </section>
+
             <div className="form_data_rodo">
                 <p className="form_rodo_text">Twoje dane osobowe zostaną wykorzystane w celu przetworzenia zamówienia</p>
                 <FontAwesomeIcon style={{ color: permission.color }} icon={faCheckSquare} size="2x" className="check_square_icon" value={permission.color} onClick={changeColor}>akceptuję</FontAwesomeIcon>

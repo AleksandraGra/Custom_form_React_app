@@ -56,6 +56,8 @@ const Form = (callback, validate) => {
                 [name]: value
             }
         });
+
+
     };
 
     const sendEmail=(e)=>{
@@ -71,6 +73,7 @@ const Form = (callback, validate) => {
 
         setErrors(validate(forms));
         setIsSubmitting(true);
+
     }
 
     useEffect(
@@ -81,7 +84,6 @@ const Form = (callback, validate) => {
         },
         [errors]
     );
-
 
     return (
         <form className="contact-form" onSubmit={sendEmail}>

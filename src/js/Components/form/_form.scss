@@ -1,4 +1,4 @@
-form{
+form {
   max-width: 81.25rem;
   margin: 0 auto;
 
@@ -6,7 +6,7 @@ form{
     margin-left: 20px;
   }
 
-  .form_first_section{
+  .form_first_section {
     width: 100%;
     height: auto;
     margin:40px 20px 0 40px;
@@ -19,14 +19,13 @@ form{
       margin-right: 10px;
     }
 
-    .form_service_option_empty{
+    .form_service_option_empty {
       font-style: italic;
       font-size: 12px
     }
-
   }
 
-  .form_service_choose{
+  .form_service_choose {
     font-weight: bold;
     text-transform: uppercase;
     padding-right: 10px;
@@ -36,13 +35,12 @@ form{
     }
   }
 
-  .form_restore_sec1{
+  .form_restore_sec1 {
     @extend.form_first_section;
     margin-top: 20px;
     display: flex;
 
-
-    .form_restore_1{
+    .form_restore_1 {
       @extend.form_service_choose;
       font-weight: normal;
     }
@@ -52,7 +50,7 @@ form{
     @extend.form_first_section;
     margin-top: 20px;
 
-    .form_restore_3, .form_restore_4{
+    .form_restore_3, .form_restore_4 {
       @extend.form_service_choose;
       font-weight: normal;
 
@@ -62,41 +60,41 @@ form{
     }
   }
 
-  .form_restore_sec2{
+  .form_restore_sec2 {
     display:flex;
     flex-direction: column;
     @extend.form_first_section;
     margin-top: 20px;
 
-    .form_restore_2{
+    .form_restore_2 {
       @extend.form_service_choose;
       font-weight: normal;
     }
-    .form_restore_textarea{
+
+    .form_restore_textarea {
       width: 50%;
       height: auto;
       font-style: italic;
 
-      @media (min-width: 360px) and (max-width: 520px){
+      @media (min-width: 360px) and (max-width: 520px) {
         width: 80%;
       }
-
     }
   }
 
-  .form_restore_option, .form_service_option{
-    font-size: 12px;
+  .form_restore_option, .form_service_option {
+    font-size: 0.75rem;
   }
   .form_restore_option_empty{
     font-style: italic;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
-  .form_search_sec1, .form_search_sec2{
+  .form_search_sec1, .form_search_sec2 {
     display: flex;
     flex-direction: column;
     @extend .form_first_section;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 
     .form_search_1, .form_search_2 {
       @extend .form_service_choose;
@@ -107,47 +105,46 @@ form{
       }
     }
 
-    .form_search_textarea{
+    .form_search_textarea {
       width: 50%;
       height: auto;
       font-style: italic;
 
-      @media (min-width: 360px) and (max-width: 520px){
+      @media (min-width: 360px) and (max-width: 520px) {
         width: 80%;
       }
-
     }
   }
 
-  .form_search_sec3{
+  .form_search_sec3 {
     @extend .form_first_section;
     margin-top: 20px;
 
-    .form_search_3{
+    .form_search_3 {
       @extend .form_service_choose;
       font-weight: normal;
 
-      @media (min-width: 350px) and (max-width: 520px){
+      @media (min-width: 350px) and (max-width: 520px) {
         width: 80%;
       }
 
-      .form_search_sel1{
+      .form_search_sel1 {
         width: 50%;
         height: auto;
         font-style: italic;
 
-        @media (min-width: 360px) and (max-width: 520px){
+        @media (min-width: 360px) and (max-width: 520px) {
           width: 80%;
         }
       }
     }
   }
-  .form_data_text{
+  .form_data_text {
     @extend .form_service_choose;
     margin:60px 20px 0 40px;
   }
 
-  .form_data_sec1, .form_data_sec4{
+  .form_data_sec1, .form_data_sec4 {
     width: 50%;
     height: auto;
     margin:20px 20px 0 40px;
@@ -156,15 +153,14 @@ form{
     align-items: baseline;
     text-transform: uppercase;
 
-
-    @media (max-width: 520px){
+    @media (max-width: 520px) {
       display: flex;
       flex-direction: column;
       margin-right: 10px;
     }
   }
 
-  .form_data_sec2, .form_data_sec3{
+  .form_data_sec2, .form_data_sec3 {
     width: 50%;
     height: auto;
     margin:20px 20px 0 40px;
@@ -173,21 +169,18 @@ form{
     align-items: baseline;
     text-transform: uppercase;
 
-
-    .form_p{
+    .form_p {
       text-transform: none;
     }
-    .form_data_input{
+    .form_data_input {
       width: 100%;
     }
   }
 
-  .form_data_rodo{
+  .form_data_rodo {
     margin:40px 20px 0 40px;
 
-    .check_square_icon{
-    }
-    .form_rodo_text{
+    .form_rodo_text {
       font-size: 0.75rem;
       margin-bottom: 10px;
     }
@@ -208,16 +201,15 @@ form{
     .form_submit_button:hover {
       background-color: #008000
     }
-
   }
 
-  .form_search_option_empty{
+  .form_search_option_empty {
     font-style: italic;
-    font-size: 12px
-  }
-  .form_search_option{
-    font-size: 12px
+    font-size: 0.75rem;
   }
 
+  .form_search_option {
+    font-size: 0.75rem;
+  }
 
 }
