@@ -8,7 +8,7 @@ const FormPersonalData = ({ forms: personal, handleChange }) => {
     const [permission, setPermission] = useState ({color:"#5B605F"})
     const changeColor = (e) => {
         setPermission(prev => ({
-            color: prev.color === '#5B605F' ? 'green' : '#5B605F'
+            color: prev.color === '#5B605F' ? '#008000' : '#5B605F'
         }))
     };
 

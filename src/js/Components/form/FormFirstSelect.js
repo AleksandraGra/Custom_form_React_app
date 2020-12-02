@@ -13,8 +13,8 @@ const FormFirstSelect = ({ changeOption }) => {
     return (
         <section id="form_first_secId" className="form_first_section" >
             <p className="form_service_choose">Wybierz rodzaj usługi</p>
-            <select className="form_service_select" value={choose} onChange={change}>
-                <option value={0} className="form_service_option"> </option>
+            <select className="form_service_select" name="choose" value={choose} onChange={change}>
+                <option value={0} className="form_service_option_empty">wybierz</option>
                 <option value={1} className="form_service_option" >renowacja</option>
                 <option value={2} className="form_service_option" >wyszukanie przedmiotu vintage</option>
             </select>

@@ -5,9 +5,13 @@ import FormSearch from "./FormSearch";
 import FormPersonalData from "./FormPersonalData";
 import FormSubmitButton from "./FormButton";
 import FormFirstSelect from "./FormFirstSelect";
-//import {Link} from "react-router-dom";
+import emailjs from 'emailjs-com';
+import{ init } from 'emailjs-com';
+init("user_K8CVmHZPgBpaCnTeI3Lwb");
+
 
 const Form = () => {
+
     const [option, setOption] = useState(0)
 
     const [forms, setForms] = useState({
@@ -16,8 +20,18 @@ const Form = () => {
         company:"",
         address:"",
         email:"",
-        phone:""
+        phone:"",
+        item:"",
+        description:"",
+        finish:"",
+        pickup:"",
+        expectation:"",
+        descriptions:"",
+        pickups:"",
+        send:""
     })
+
+
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -33,17 +47,40 @@ const Form = () => {
         setOption(option)
     }
 
+
+    const handleSubmit = (e) => {
+        const {name, value} = e.target;
+        setForms(prevState => {
+            return {
+                ...prevState,
+                [name]: value
+            }
+        });
+    };
+
+    const sendEmail=(e)=>{
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_v1rsoyi', 'template_kso4aev', e.target, 'user_K8CVmHZPgBpaCnTeI3Lwb')
+            .then((result) => {
+                alert("Wysłano formularz, wkrótce skontaktujemy się z Tobą",result.text);
+            }, (error) => {
+                alert("Nie udało się wysłąć zgłoszenia. Spróbuj ponownie",error.text);
+            });
+            e.target.reset()
+    }
+
     return (
-        <form >
-            <FormFirstSelect changeOption={changeOption}/>
-            {option === 1 && <FormRestoration />}
-            {option === 2 && <FormSearch/>}
+        <form className="contact-form" onSubmit={sendEmail}>
+            <FormFirstSelect forms={forms} changeOption={changeOption}/>
+            {option === 1 && <FormRestoration forms={forms} handleChange={handleChange}/>}
+            {option === 2 && <FormSearch forms={forms} handleChange={handleChange}/>}
             <FormPersonalData forms={forms} handleChange={handleChange}/>
-            <FormSubmitButton/>
+            <FormSubmitButton handleSubmit={handleSubmit}/>
         </form>
         );
 
     };
-
 
 export default Form

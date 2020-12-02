@@ -18,6 +18,12 @@ form{
       flex-direction: column;
       margin-right: 10px;
     }
+
+    .form_service_option_empty{
+      font-style: italic;
+      font-size: 12px
+    }
+
   }
 
   .form_service_choose{
@@ -81,6 +87,10 @@ form{
   .form_restore_option, .form_service_option{
     font-size: 12px;
   }
+  .form_restore_option_empty{
+    font-style: italic;
+    font-size: 12px;
+  }
 
   .form_search_sec1, .form_search_sec2{
     display: flex;
@@ -108,6 +118,7 @@ form{
 
     }
   }
+
   .form_search_sec3{
     @extend .form_first_section;
     margin-top: 20px;
@@ -190,8 +201,23 @@ form{
     .form_submit_button {
       text-transform: uppercase;
       padding: 20px;
-
+      background-color: #dcdcdc;
+      border-style: inherit;
     }
+
+    .form_submit_button:hover {
+      background-color: #008000
+    }
+
   }
+
+  .form_search_option_empty{
+    font-style: italic;
+    font-size: 12px
+  }
+  .form_search_option{
+    font-size: 12px
+  }
+
 
 }
