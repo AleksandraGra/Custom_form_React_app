@@ -11,7 +11,7 @@ init("user_K8CVmHZPgBpaCnTeI3Lwb");
 //import FormValidate from "./FormValidate";
 
 
-const Form = (callback, validate) => {
+const Form = () => {
     const [option, setOption] = useState(0)
     const [forms, setForms] = useState({
         name:"",
@@ -29,9 +29,6 @@ const Form = (callback, validate) => {
         pickups:"",
         send:""
     })
-    const [errors, setErrors] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
-
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -47,7 +44,6 @@ const Form = (callback, validate) => {
         setOption(option)
     }
 
-
     const handleSubmit = (e) => {
         const {name, value} = e.target;
         setForms(prevState => {
@@ -56,8 +52,6 @@ const Form = (callback, validate) => {
                 [name]: value
             }
         });
-
-
     };
 
     const sendEmail=(e)=>{
@@ -70,20 +64,7 @@ const Form = (callback, validate) => {
                 alert("Nie udało się wysłąć zgłoszenia. Spróbuj ponownie",error.text);
             });
             e.target.reset()
-
-        setErrors(validate(forms));
-        setIsSubmitting(true);
-
     }
-
-    useEffect(
-        () => {
-            if (Object.keys(errors).length === 0 && isSubmitting) {
-                callback();
-            }
-        },
-        [errors]
-    );
 
     return (
         <form className="contact-form" onSubmit={sendEmail}>

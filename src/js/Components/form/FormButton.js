@@ -9,9 +9,11 @@ const FormSubmitButton = () => {
     }
 
     return (
-        <div className="form_button_container">
-            <button className="form_submit_button" type="submit" name="send" value={send.send} onClick={handleSumbit}>Wyślij zgłoszenie</button>
-        </div>
+        <>
+            <div className="form_button_container">
+                <button className="form_submit_button" type="submit" name="send" value={send.send} onClick={handleSumbit}>Wyślij zgłoszenie</button>
+            </div>
+        </>
     );
 };
 

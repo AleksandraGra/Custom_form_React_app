@@ -5,7 +5,6 @@ export default function FormValidate(forms) {
     if (!forms.name.trim()) {
         errors.name = 'Wpisz imię';
     }
-
     if (!forms.email) {
         errors.email = 'Wpisz adres email';
     } else if (!/\S+@\S+\.\S+/.test(forms.email)) {

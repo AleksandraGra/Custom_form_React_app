@@ -54,7 +54,7 @@ form {
       @extend.form_service_choose;
       font-weight: normal;
 
-      @media (min-width: 350px) and (max-width: 520px){
+      @media (min-width: 350px) and (max-width: 520px) {
         width: 80%;
       }
     }
@@ -85,7 +85,8 @@ form {
   .form_restore_option, .form_service_option {
     font-size: 0.75rem;
   }
-  .form_restore_option_empty{
+
+  .form_restore_option_empty {
     font-style: italic;
     font-size: 0.75rem;
   }
@@ -173,53 +174,59 @@ form {
       text-transform: none;
     }
   }
-  }
+}
 
-  .form_data_rodo {
-    margin:40px 20px 0 40px;
+.form_data_rodo {
+  margin:40px 20px 0 40px;
 
-    .form_rodo_text {
-      font-size: 0.75rem;
-      margin-bottom: 10px;
-    }
-  }
-
-  .form_button_container {
-    display:flex;
-    justify-content: flex-end;
-    margin:40px 240px 40px 40px;
-
-    @media (min-width: 360px) and (max-width: 520px) {
-      width: 50%;
-      margin:40px 40px 40px 40px;
-    }
-
-    .form_submit_button {
-      text-transform: uppercase;
-      padding: 20px;
-      background-color: #dcdcdc;
-      border-style: inherit;
-    }
-
-    .form_submit_button:hover {
-      background-color: #008000
-    }
-  }
-
-  .form_search_option_empty {
-    font-style: italic;
+  .form_rodo_text {
     font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+}
+
+.form_button_container {
+  display:flex;
+  justify-content: flex-end;
+  margin:40px 240px 40px 40px;
+
+  @media (min-width: 360px) and (max-width: 520px) {
+    margin:40px 40px 40px 40px;
+    justify-content: center;
   }
 
-  .form_search_option {
-    font-size: 0.75rem;
+  .form_submit_button {
+    text-transform: uppercase;
+    padding: 20px;
+    background-color: #dcdcdc;
+    border-style: inherit;
   }
 
-  .form_data_input, .form_data_input_1, .form_data_input_2 {
-    width: 100%;
-
-    @media (min-width: 360px) and (max-width: 520px) {
-      width: 140%;
-      margin-bottom: 10px;
+  .form_submit_button:hover {
+    background-color: #008000
   }
+}
+
+.form_button_backicon {
+  color:#A1A194;
+  margin:40px 40px 10px 40px;
+}
+
+.form_search_option_empty {
+  font-style: italic;
+  font-size: 0.75rem;
+  }
+
+.form_search_option {
+  font-size: 0.75rem;
+  }
+
+.form_data_input, .form_data_input_1, .form_data_input_2 {
+   width: 100%;
+
+  @media (min-width: 360px) and (max-width: 520px) {
+    width: 140%;
+    margin-bottom: 10px;
+  }
+
 }
