@@ -9,11 +9,7 @@ import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
 init("user_K8CVmHZPgBpaCnTeI3Lwb");
 require('dotenv').config();
-//console.log(process.env);
 
-// const Service = process.env.REACT_APP_API_KEY_EMAILJS_SERVICE;
-// const Template = process.env.REACT_APP_API_KEY_EMAILJS_TEMPLATE;
-// const User = process.env.REACT_APP_API_KEY_EMAILJS_USER;
 
 const Form = (callback) => {
     const [option, setOption] = useState(0)
