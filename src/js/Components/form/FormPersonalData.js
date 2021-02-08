@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCheckSquare} from '@fortawesome/free-solid-svg-icons'
 
 
-const FormPersonalData = ({ forms: personal, handleChange }) => {
+const FormPersonalData = ({ forms: personal, handleChange, errors }) => {
     const [permission, setPermission] = useState ({color:"#5B605F"})
-
+    console.log(errors)
     const changeColor = (e) => {
         setPermission(prev => ({
             color: prev.color === '#5B605F' ? '#008000' : '#5B605F'
@@ -21,6 +21,7 @@ const FormPersonalData = ({ forms: personal, handleChange }) => {
                 <div className="form_data_sec1name">
                     <p className="form_data_1">Imię</p>
                     <input type="text" name="name" className="form_data_input" value={personal.name} onChange={handleChange}/>
+                    <p>{errors?.name}</p>
                 </div>
                 <div className="form_data_sec1surname">
                     <p className="form_data_1">Nazwisko</p>
@@ -42,6 +43,7 @@ const FormPersonalData = ({ forms: personal, handleChange }) => {
                 <div className="form_data_sec4email">
                     <p className="form_data_4">email</p>
                     <input  type="email" name="email" className="form_data_input" value={personal.email} onChange={handleChange}/>
+                    <p>{errors?.email}</p>
                 </div>
                 <div className="form_data_sec4phone">
                     <p className="form_data_5">telefon</p>
@@ -51,7 +53,7 @@ const FormPersonalData = ({ forms: personal, handleChange }) => {
 
             <div className="form_data_rodo">
                 <p className="form_rodo_text">Twoje dane osobowe zostaną wykorzystane w celu przetworzenia zamówienia</p>
-                <FontAwesomeIcon style={{ color: permission.color }} icon={faCheckSquare} size="2x" className="check_square_icon" value={permission.color} onClick={changeColor}>akceptuję</FontAwesomeIcon>
+                <FontAwesomeIcon style={{ color: permission.color }} icon={faCheckSquare} size="2x"  name="check" className="check_square_icon" value={permission.color} onClick={changeColor}>akceptuję</FontAwesomeIcon>
             </div>
 
         </div>

@@ -8,10 +8,14 @@ import FormFirstSelect from "./FormFirstSelect";
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
 init("user_K8CVmHZPgBpaCnTeI3Lwb");
-//import FormValidate from "./FormValidate";
+require('dotenv').config();
+//console.log(process.env);
 
+// const Service = process.env.REACT_APP_API_KEY_EMAILJS_SERVICE;
+// const Template = process.env.REACT_APP_API_KEY_EMAILJS_TEMPLATE;
+// const User = process.env.REACT_APP_API_KEY_EMAILJS_USER;
 
-const Form = () => {
+const Form = (callback) => {
     const [option, setOption] = useState(0)
     const [forms, setForms] = useState({
         name:"",
@@ -29,6 +33,9 @@ const Form = () => {
         pickups:"",
         send:""
     })
+    const [errors, setErrors] = useState({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -38,11 +45,14 @@ const Form = () => {
                 [name]: value
             }
         });
+
+        setErrors({})
     };
 
     const changeOption = (option) => {
         setOption(option)
     }
+
 
     const handleSubmit = (e) => {
         const {name, value} = e.target;
@@ -52,30 +62,66 @@ const Form = () => {
                 [name]: value
             }
         });
+
+
+
+
     };
+
+    const validate = () => {
+        const err = {}
+        if(forms.name.length <= 3) {
+            err.name = "Nieporawne imię";
+        }
+
+        if(!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(forms.email)) {
+            err.email = "zły email";
+        }
+        console.log(Object.values(err));
+        if (Object.values(err).length > 0) {
+            setErrors(err)
+            return false
+        } else {
+            return true;
+        }
+    }
 
     const sendEmail=(e)=>{
         e.preventDefault();
 
-        emailjs.sendForm('service_v1rsoyi', 'template_kso4aev', e.target, 'user_K8CVmHZPgBpaCnTeI3Lwb')
+        if (!validate()) return;
+
+        emailjs.sendForm(process.env.REACT_APP_API_KEY_EMAILJS_SERVICE, process.env.REACT_APP_API_KEY_EMAILJS_TEMPLATE, e.target, process.env.REACT_APP_API_KEY_EMAILJS_USER)
             .then((result) => {
                 alert("Wysłano formularz, wkrótce skontaktujemy się z Tobą",result.text);
             }, (error) => {
                 alert("Nie udało się wysłąć zgłoszenia. Spróbuj ponownie",error.text);
             });
-            e.target.reset()
+        e.target.reset()
+
+        setIsSubmitting(true);
+
     }
+
+    useEffect(
+        () => {
+            if (Object.keys(errors).length === 0 && isSubmitting) {
+                callback();
+            }
+        },
+        [errors]
+    );
 
     return (
         <form className="contact-form" onSubmit={sendEmail}>
-            <FormFirstSelect forms={forms} changeOption={changeOption}/>
+            <FormFirstSelect forms={forms} errors={errors} changeOption={changeOption}/>
             {option === 1 && <FormRestoration forms={forms} handleChange={handleChange}/>}
             {option === 2 && <FormSearch forms={forms} handleChange={handleChange}/>}
-            <FormPersonalData forms={forms} handleChange={handleChange}/>
+            <FormPersonalData errors={errors} forms={forms} handleChange={handleChange}/>
             <FormSubmitButton handleSubmit={handleSubmit}/>
         </form>
-        );
+    );
 
-    };
+};
 
 export default Form

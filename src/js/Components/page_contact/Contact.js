@@ -1,12 +1,13 @@
 import React from "react";
 import './_contact.scss';
+
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 const center = {
     lat: 50.05511,
     lng: 19.89319
 };
-
+require('dotenv').config();
 
 function Contact() {
     const [map, setMap] = React.useState(center)
@@ -27,7 +28,7 @@ function Contact() {
             <p className="contact_text">jak dojechać</p>
             <div className="contact_containers">
                 <div id="map" className="contact_google_map">
-                    <LoadScript googleMapsApiKey="AIzaSyB3v5t4RJTNzSNKh6isW1jVGCeQSvCD_4c">
+                    <LoadScript googleMapsApiKey={process.env.REACT_APP_API_KEY_GOOGLE}>
                         <GoogleMap
                             center={center}
                             zoom={15}

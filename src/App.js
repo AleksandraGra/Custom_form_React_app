@@ -11,7 +11,6 @@ import NotFound from "./js/Components/NotFound";
 //import { library } from '@fortawesome/fontawesome-svg-core'
 //import "./scss/App.scss"
 
-
 export default function App() {
     return (
         <>
