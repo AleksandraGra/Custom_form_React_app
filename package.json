@@ -59,7 +59,7 @@
     "@babel/core": "^7.12.7",
     "@babel/preset-env": "^7.12.7"
   },
-  "homepage": "https://AleksandraGra.github.io/nielubiepolitury",
+  "homepage": "https://AleksandraGra.github.io/nielubiepolitury/index.html",
   "react-dotenv": {
     "whitelist": [
       "REACT_APP_API_KEY_GOOGLE"
