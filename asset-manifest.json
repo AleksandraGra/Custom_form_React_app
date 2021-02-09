@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/nielubiepolitury/static/css/main.e22efa32.chunk.css",
+    "main.js": "/nielubiepolitury/static/js/main.54081c22.chunk.js",
+    "main.js.map": "/nielubiepolitury/static/js/main.54081c22.chunk.js.map",
+    "runtime-main.js": "/nielubiepolitury/static/js/runtime-main.476a6a23.js",
+    "runtime-main.js.map": "/nielubiepolitury/static/js/runtime-main.476a6a23.js.map",
+    "static/js/2.be9692b9.chunk.js": "/nielubiepolitury/static/js/2.be9692b9.chunk.js",
+    "static/js/2.be9692b9.chunk.js.map": "/nielubiepolitury/static/js/2.be9692b9.chunk.js.map",
+    "index.html": "/nielubiepolitury/index.html",
+    "static/css/main.e22efa32.chunk.css.map": "/nielubiepolitury/static/css/main.e22efa32.chunk.css.map",
+    "static/js/2.be9692b9.chunk.js.LICENSE.txt": "/nielubiepolitury/static/js/2.be9692b9.chunk.js.LICENSE.txt",
+    "static/media/NotFound.8f716f7f.bin": "/nielubiepolitury/static/media/NotFound.8f716f7f.bin",
+    "static/media/logo.d701d269.png": "/nielubiepolitury/static/media/logo.d701d269.png",
+    "static/media/minilogo.3f739c0e.png": "/nielubiepolitury/static/media/minilogo.3f739c0e.png",
+    "static/media/photo1.34da002f.jpg": "/nielubiepolitury/static/media/photo1.34da002f.jpg",
+    "static/media/photo2.c627ffe6.JPG": "/nielubiepolitury/static/media/photo2.c627ffe6.JPG",
+    "static/media/photo3.1c2c3e83.JPG": "/nielubiepolitury/static/media/photo3.1c2c3e83.JPG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.476a6a23.js",
+    "static/js/2.be9692b9.chunk.js",
+    "static/css/main.e22efa32.chunk.css",
+    "static/js/main.54081c22.chunk.js"
+  ]
+}
